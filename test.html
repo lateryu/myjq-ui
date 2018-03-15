@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>框架首页</title>
+</head>
+
+<body>
+    <button id="button-test"></button>
+</body>
+<script src="lib/seajs/sea.js"></script>
+<script src="lib/seajs/sea.config.js"></script>
+<script>
+seajs.use('button', function(obj) {
+    // loading组件测试
+    //$('#loading-text').loading();
+
+    // button组件测试
+   $('#button-test').linkButton({
+    	text: '提交',
+    	onclick: function() {
+    		console.info(11);
+    	}
+    });
+    $('#button-test').linkButton("enable","掉完了");
+   
+
+  /*  $('#star-test').star({
+        onclick: function(value) {
+            console.info(value);
+            console.info($('#star-test').star('getValue'));
+        }
+    });*/
+});
+</script>
+
+</html>
